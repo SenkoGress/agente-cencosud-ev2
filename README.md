@@ -27,14 +27,34 @@ La solución está construida sobre el framework CrewAI, implementando un flujo 
 
    # Asistente de Recursos Humanos Cencosud - Observabilidad y Trazabilidad
 
-Este proyecto implementa un agente de IA para consultas internas de RRHH con métricas de rendimiento y observabilidad integradas.
+# Asistente de Recursos Humanos Cencosud - Observabilidad y Trazabilidad
 
-## Configuración
-1. Clonar el repositorio.
+Este proyecto implementa un agente de IA especializado en consultas internas de RRHH. Incorpora un sistema de observabilidad y trazabilidad que permite monitorear el rendimiento (KPIs), identificar anomalías y asegurar protocolos de ética y privacidad en las respuestas.
+
+## Estructura del Proyecto
+- `app.py`: Orquestador principal del agente (CrewAI).
+- `dashboard.py`: Dashboard interactivo en Streamlit para visualizar logs y métricas.
+- `tools.py`: Herramientas personalizadas para la búsqueda de políticas y evaluación de riesgos.
+- `trazabilidad_cencosud.log`: Registro de eventos del sistema.
+
+## Configuración y Ejecución
+
+### Requisitos previos
+- Python 3.10 o superior.
+- Tener configuradas las llaves de API necesarias.
+
+### Instalación
+1. Clonar el repositorio: `git clone https://github.com/SenkoGress/agente-cencosud-ev2.git`
 2. Crear un entorno virtual: `python -m venv venv`
-3. Instalar dependencias: `pip install -r requirements.txt`
-4. Crear un archivo `.env` basado en `.env.example` y completar las credenciales.
+3. Activar el entorno:
+   - Windows: `venv\Scripts\activate`
+   - Linux/Mac: `source venv/bin/activate`
+4. Instalar dependencias: `pip install -r requirements.txt`
 
-## Ejecución
-- Para iniciar el asistente: `python app.py`
-- Para visualizar el dashboard de observabilidad: `streamlit run dashboard.py`
+### Configuración de Credenciales
+1. Renombra el archivo `.env.example` a `.env`.
+2. Abre el archivo `.env` y completa las credenciales (API Keys, Token de GitHub, etc.).
+
+### Uso del Sistema
+- **Ejecutar el Asistente:** `python app.py` (Escribe 'salir' para terminar).
+- **Visualizar Dashboard de Observabilidad:** `streamlit run dashboard.py`
